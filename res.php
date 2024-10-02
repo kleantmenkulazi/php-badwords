@@ -69,10 +69,10 @@
                 - Scrittura in pagina della frase originale presa dall'input con echo
                 - Scritura della sua lunghezza con strlen()
              -->
-            La frase digitata in origine: 
-            <br>
+            La frase digitata in origine:
+            <br> 
             <?php
-                echo $_GET['phrase']. "<br> La frase ha " .(strlen($_GET['phrase']))." caratteri.";
+                echo $_GET['phrase']. "<br>ha " .(strlen($_GET['phrase']))." caratteri.";
             ?>
 
             <br>
