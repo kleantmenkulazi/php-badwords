@@ -1,7 +1,3 @@
-<?php
-// $nome = 'Marge';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,25 +22,35 @@
 <body class="bg-black">
 
     <div class="container p-5 text-center">
-        <h1 class="text-white">
+
+        <h1 class="text-white mb-4">
             Censurami le "bad w***s"
         </h1>
 
-        <div class="form-floating mb-4">
-            <!-- Parola -->
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">Scrivi una frase...</label>
-        </div>
+        <hr class="text-white my-5">
 
-        <div class="form-floating mb-4">
-            <!-- censura -->
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">Scrivi la parola da censurare...</label>
-        </div>
+        <form action="./res.php" method="GET">
 
-        <!-- <p class="text-white">
-            my name is <?php echo $nome; ?>
-        </p> -->
+            <div class="form-floating mb-4">
+                <!-- Frase -->
+                <!-- name="" è obbligatorio per passare il dato -->
+                <input name="phrase" class="form-control" placeholder="Scrivi una frase.." id="floatingTextarea"></input>
+                <label for="floatingTextarea">Scrivi una frase...</label>
+            </div>
+
+            <div class="form-floating mb-4">
+                <!-- Parola da censurare -->
+                <input name="word" class="form-control" placeholder="Scrivi la parola da censurare..." id="floatingTextarea"></input>
+                <label for="floatingTextarea">Scrivi la parola da censurare...</label>
+            </div>
+
+            <hr class="text-white my-5">
+
+            <button type="submit" class="btn btn-outline-light">
+                Invia
+            </button>
+
+        </form>
 
     </div>
 
